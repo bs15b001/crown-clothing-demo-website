@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
-import {Route,Link} from 'react-router-dom';
+import {Route,Switch} from 'react-router-dom';
+
+import Header from "./components/header/header.component";
 
 
 import ShopPage from './pages/shop/shop.component.jsx'
@@ -15,11 +17,14 @@ const HatsPage = () => (
 function App() {
   return (
     <div>
-      <switch>
+      <Header></Header>
+      <Switch>
         <Route exact path='/' component={Homepage} />
         <Route path='/hats' component={HatsPage} />
         <Route exact path='/shop' component={ShopPage} />
-      </switch>
+      </Switch>
+   
+
     </div>
   );
 }
